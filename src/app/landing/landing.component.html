@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="heading">
+        <h2>Welcome To HOMEDEPOT.</h2>
+        <h5>Let's Get Started</h5>
+    </div>
+    <button type="button" (click)="addNewUser()" class="btn btn-primary new-user-btn">Add New User</button>
+</div>
+<div class="container content">
+    <form [formGroup]="landingPageForm">
+        <p>Fill in the agent details to proceed</p>
+        <p>Agency Name</p>
+        <select name="Agency" formControlName="agency">
+            <option value="disabled">Select Agency</option>
+        <option *ngFor="let agency of agencyList">{{agency?.name}}</option>
+    </select>
+        <p>User</p>
+        <select name="User">
+            <option value="disabled">Select User</option>
+        <option *ngFor="let user of userList">{{user?.name}}</option>
+    </select>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+.userForm {
+    margin: 2% auto;
+    padding: 10px;
+    border: 1px solid rgb(180, 180, 180);
+    width: 50%;
+}
+
+.form-input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    background-color: rgb(243, 243, 243);
+}
