@@ -13,10 +13,18 @@
             <option value="disabled">Select Agency</option>
         <option *ngFor="let agency of agencyList">{{agency?.name}}</option>
     </select>
+        <span *ngIf="flag">
         <p>User</p>
         <select name="User">
             <option value="disabled">Select User</option>
         <option *ngFor="let user of userList">{{user?.name}}</option>
     </select>
+    
+        <div>
+            <!-- <a class="btn btn-lg btn-primary proceed-btn" [routerLink]="['/companyList', agency.id]">submit</a> -->
+            <button type="button" (click)="proceedOnClick()">submit</button>
+        </div>
+    </span>
     </form>
+
 </div>

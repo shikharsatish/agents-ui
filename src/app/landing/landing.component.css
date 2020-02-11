@@ -21,3 +21,7 @@ select {
 .new-user-btn {
     float: right;
 }
+
+.proceed-btn {
+    margin-left: 12%;
+}

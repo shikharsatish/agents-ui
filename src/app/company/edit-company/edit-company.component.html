@@ -1,0 +1,16 @@
+<div class="container userForm">
+
+    <form [formGroup]="addCompany" class="form-group" (ngSubmit)="onSubmit()">
+        <label for="name" class="d-block">
+            Company Name:
+            <input type="text" class="form-control form-input" placeholder="{{companyName}}" formControlName="name" id="name">
+        </label>
+
+        <label for="address" class="d-block"> 
+           Company Address:
+            <input type="text" class="form-control form-input" placeholder="{{companyAddress}}" formControlName="address" id="address">
+        </label>
+
+        <button type="submit" class="btn btn-primary button">Submit</button>
+    </form>
+</div>

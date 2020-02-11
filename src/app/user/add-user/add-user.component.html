@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="heading">
+        <h2>Add User</h2>
+    </div>
+</div>
+<div class="container userForm">
+    <form [formGroup]="agencyGroup" class="form-group">
+
+        <h6>Select Agency</h6>
+        <select name="Agency" formControlName="agency" class="d-block form-input">
+                <option value="disabled">Select Agency</option>
+            <option *ngFor="let agency of agencyList">{{agency?.name}}</option>
+        </select>
+    </form>
+
+    <form [formGroup]="addUser" class="form-group" (ngSubmit)="onSubmit()">
+        <label for="name" class="d-block">
+            Name:
+            <input type="text" class="form-control form-input" formControlName="name" id="name">
+        </label>
+
+        <label for="address" class="d-block"> 
+            Address:
+            <input type="text" class="form-control form-input" formControlName="address" id="address">
+        </label>
+
+        <label for="email" class="d-block">
+            Email:
+            <input type="text" class="form-control form-input" formControlName="email" id="email">
+        </label>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
